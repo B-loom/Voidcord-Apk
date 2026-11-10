@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Voidcord Apk</title>
+<meta name="description" content="Voidcord on your Android phone: your Discord accounts and your bots in one app.">
+<link rel="icon" href="icon.png">
+<link rel="stylesheet" href="style.css">
+<link rel="alternate" hreflang="fr" href="fr/index.html">
+<link rel="alternate" hreflang="en" href="index.html">
+<meta property="og:title" content="Voidcord Apk">
+<meta property="og:description" content="Voidcord on your Android phone.">
+<meta property="og:image" content="icon.png">
+</head>
+<body>
+
+<nav class="topbar">
+    <a class="brand" href="index.html">
+        <img src="icon.png" alt="">
+        <span>Voidcord Apk</span>
+        <span class="version">v1.0.0</span>
+    </a>
+    <div class="nav-links">
+        <a class="nav-link current" href="index.html">Home</a>
+        <a class="nav-link" href="https://github.com/B-loom/Voidcord-Apk/blob/main/CHANGELOG.md">What's new</a>
+        <a class="nav-link" href="https://github.com/B-loom/Voidcord">Voidcord for PC</a>
+    </div>
+    <a class="lang" href="fr/index.html" hreflang="fr" lang="fr">Français</a>
+</nav>
+
+<main class="wrap">
+
+<header class="hero">
+    <img class="hero-icon" src="icon.png" alt="">
+    <h1>Voidcord Apk</h1>
+    <p class="tagline">
+        Voidcord on your Android phone.
+        Your Discord accounts and your bots, in one app.
+    </p>
+
+    <div class="actions">
+        <a class="btn btn-main" href="https://github.com/B-loom/Voidcord-Apk/releases/latest">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3v10.6l3.3-3.3 1.4 1.4-5.7 5.7-5.7-5.7 1.4-1.4L10 13.6V3h2ZM4 19h16v2H4v-2Z"/></svg>
+            Download the APK
+        </a>
+        <a class="btn btn-ghost" href="https://github.com/B-loom/Voidcord-Apk">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2 0-.4-.5-1.6.2-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.9 18.3 5.2 18.3 5.2c.7 1.6.2 2.8.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3Z"/></svg>
+            See on GitHub
+        </a>
+    </div>
+
+    <p class="note">Android 8.0 or newer. No root needed. Take the <code>arm64-v8a</code> file.</p>
+</header>
+
+<section class="section">
+    <h2>The same Voidcord, on a phone</h2>
+    <p>
+        This is not a rewrite. It is the same server, the same API routes, the same settings
+        screens, the same startup animation and the same Vencord layer as the desktop version.
+        Only what went through Electron had to be replaced.
+    </p>
+</section>
+
+<section class="section">
+    <h2>How it works</h2>
+    <p>
+        On a computer, Voidcord is a local server with an Electron window in front of it, and
+        Electron makes the Discord client believe it is talking to <code>discord.com</code>. A
+        WebView cannot redirect a domain name, so the client is served from
+        <code>http://127.0.0.1</code> — which Chromium treats as a secure origin — and Node.js
+        runs inside the app itself, through nodejs-mobile.
+    </p>
+    <pre><code>WebView ──► http://127.0.0.1:&lt;port&gt;/app ──► Voidcord server (Node) ──► Discord</code></pre>
+</section>
+
+<section class="section">
+    <h2>What does not work yet</h2>
+    <p>
+        Some of this is Voidcord, some of it is Discord. Discord deliberately cuts features out of
+        its mobile web client: voice, file uploads and the GIF picker are not ours to give back.
+        Screen sharing has no equivalent in a WebView, game detection reads Windows processes, and
+        Android requires you to confirm an APK install yourself — so updates are announced rather
+        than applied.
+    </p>
+</section>
+
+</main>
+
+<footer class="footer">
+    <p>Voidcord Apk — GPL-3.0 · <a href="https://github.com/B-loom/Voidcord">Voidcord for PC</a></p>
+</footer>
+
+</body>
+</html>

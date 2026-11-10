@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Voidcord Apk</title>
+<meta name="description" content="Voidcord sur ton téléphone Android : tes comptes Discord et tes bots dans une seule application.">
+<link rel="icon" href="icon.png">
+<link rel="stylesheet" href="../style.css">
+<link rel="alternate" hreflang="en" href="../index.html">
+<link rel="alternate" hreflang="fr" href="index.html">
+<meta property="og:title" content="Voidcord Apk">
+<meta property="og:description" content="Voidcord sur ton téléphone Android.">
+<meta property="og:image" content="icon.png">
+</head>
+<body>
+
+<nav class="topbar">
+    <a class="brand" href="index.html">
+        <img src="icon.png" alt="">
+        <span>Voidcord Apk</span>
+        <span class="version">v1.0.0</span>
+    </a>
+    <div class="nav-links">
+        <a class="nav-link current" href="index.html">Accueil</a>
+        <a class="nav-link" href="https://github.com/B-loom/Voidcord-Apk/blob/main/CHANGELOG.md">Nouveautés</a>
+        <a class="nav-link" href="https://github.com/B-loom/Voidcord">Voidcord PC</a>
+    </div>
+    <a class="lang" href="../index.html" hreflang="en" lang="en">English</a>
+</nav>
+
+<main class="wrap">
+
+<header class="hero">
+    <img class="hero-icon" src="icon.png" alt="">
+    <h1>Voidcord Apk</h1>
+    <p class="tagline">
+        Voidcord sur ton téléphone Android.
+        Tes comptes Discord et tes bots, dans une seule application.
+    </p>
+
+    <div class="actions">
+        <a class="btn btn-main" href="https://github.com/B-loom/Voidcord-Apk/releases/latest">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3v10.6l3.3-3.3 1.4 1.4-5.7 5.7-5.7-5.7 1.4-1.4L10 13.6V3h2ZM4 19h16v2H4v-2Z"/></svg>
+            Télécharger l'APK
+        </a>
+        <a class="btn btn-ghost" href="https://github.com/B-loom/Voidcord-Apk">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2 0-.4-.5-1.6.2-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.9 18.3 5.2 18.3 5.2c.7 1.6.2 2.8.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3Z"/></svg>
+            Voir sur GitHub
+        </a>
+    </div>
+
+    <p class="note">Android 8.0 ou plus récent. Pas besoin de root. Prends le fichier <code>arm64-v8a</code>.</p>
+</header>
+
+<section class="section">
+    <h2>Le même Voidcord, sur un téléphone</h2>
+    <p>
+        Rien n'a été réécrit. C'est le même serveur, les mêmes routes, les mêmes écrans de
+        réglages, la même animation de démarrage et le même calque Vencord que sur l'ordinateur.
+        Seul ce qui passait par Electron a dû être remplacé.
+    </p>
+</section>
+
+<section class="section">
+    <h2>Comment ça marche</h2>
+    <p>
+        Sur un ordinateur, Voidcord est un serveur local devant lequel Electron place une fenêtre,
+        en faisant croire au client Discord qu'il parle à <code>discord.com</code>. Une WebView ne
+        sait pas détourner un nom de domaine : le client est donc servi depuis
+        <code>http://127.0.0.1</code> — que Chromium traite comme une origine sûre — et Node.js
+        tourne à l'intérieur de l'application, par nodejs-mobile.
+    </p>
+    <pre><code>WebView ──► http://127.0.0.1:&lt;port&gt;/app ──► serveur Voidcord (Node) ──► Discord</code></pre>
+</section>
+
+<section class="section">
+    <h2>Ce qui ne marche pas encore</h2>
+    <p>
+        Une partie vient de Voidcord, l'autre de Discord. Discord ampute volontairement son client
+        web mobile : le vocal, l'envoi de fichiers et le sélecteur de GIF ne sont pas à nous de
+        rendre. Le partage d'écran n'a pas d'équivalent dans une WebView, la détection de jeux lit
+        les processus de Windows, et Android exige que tu confirmes toi-même l'installation d'un
+        APK — les mises à jour sont donc annoncées, pas appliquées.
+    </p>
+</section>
+
+</main>
+
+<footer class="footer">
+    <p>Voidcord Apk — GPL-3.0 · <a href="https://github.com/B-loom/Voidcord">Voidcord PC</a></p>
+</footer>
+
+</body>
+</html>
